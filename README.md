@@ -171,9 +171,9 @@ buttons.forEach(button => {
 });
 /projectmap
     /img
-        luxe-tshirt.jpg
-        luxe-hoodie.jpg
-        luxe-jacket.jpg
+        T-shirt.jpg
+        Hoodie.jpg
+        Sweatpants.jpg
         luxo-logo.png
     index.html
     styles.css
