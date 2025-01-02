@@ -14,38 +14,38 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Kids</a></li>
                 <li><a href="#">Contact</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Woman</a></li>
+                <li><a href="#">Kids</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="intro">
-            <h2>Welkom bij Luxo Fashion</h2>
-            <p>Ontdek onze luxe kledinglijn voor dames, heren en kinderen. Trendy, comfortabel en stijlvol!</p>
+            <h2>Welcome to Luxo Fashion</h2>
+            <p>Luxo' where comfort meets class</p>
         </section>
 
         <section class="products">
             <h3>Onze producten</h3>
             <div class="product">
-                <img src="img/luxe-tshirt.jpg" alt="Luxe T-shirt">
-                <h4>Luxe T-shirt</h4>
-                <p>Prijs: €59,99</p>
+                <img src="img/T-shirt.jpg" alt=" T-shirt">
+                <h4> T-shirt</h4>
+                <p>Prijs: €64,99</p>
                 <button class="add-to-cart">Toevoegen aan winkelwagentje</button>
             </div>
             <div class="product">
-                <img src="img/luxe-hoodie.jpg" alt="Luxe Hoodie">
-                <h4>Luxe Hoodie</h4>
-                <p>Prijs: €119,99</p>
+                <img src="img/hoodie.jpg" alt=" Hoodie">
+                <h4> Hoodie</h4>
+                <p>Prijs: €129,99</p>
                 <button class="add-to-cart">Toevoegen aan winkelwagentje</button>
             </div>
             <div class="product">
-                <img src="img/luxe-jacket.jpg" alt="Luxe Jacket">
-                <h4>Luxe Jacket</h4>
-                <p>Prijs: €179,99</p>
+                <img src="img/Sweatpants.jpg" alt=" Sweatpants">
+                <h4> Sweatpants</h4>
+                <p>Prijs: €129,99</p>
                 <button class="add-to-cart">Toevoegen aan winkelwagentje</button>
             </div>
         </section>
