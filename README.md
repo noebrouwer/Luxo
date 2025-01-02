@@ -8,114 +8,174 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <h1>Welcome to Luxo Fashion</h1>
+        <div class="logo">
+            <img src="img/luxo-logo.png" alt="Luxo Logo">
         </div>
-    </header>
-
-    <div class="main-container">
-        <!-- Sidebar -->
-        <nav class="sidebar">
+        <nav>
             <ul>
-                <li><a href="#">Man</a></li>
-                <li><a href="#">Woman</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Men</a></li>
                 <li><a href="#">Kids</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+    </header>
 
-        <!-- Logo en leeg midden -->
-        <div class="main-content">
-            <img src="img/luxo-logo.png" alt="Luxo Logo" class="logo">
-        </div>
-    </div>
+    <main>
+        <section class="intro">
+            <h2>Welkom bij Luxo Fashion</h2>
+            <p>Ontdek onze luxe kledinglijn voor dames, heren en kinderen. Trendy, comfortabel en stijlvol!</p>
+        </section>
+
+        <section class="products">
+            <h3>Onze producten</h3>
+            <div class="product">
+                <img src="img/luxe-tshirt.jpg" alt="Luxe T-shirt">
+                <h4>Luxe T-shirt</h4>
+                <p>Prijs: €59,99</p>
+                <button class="add-to-cart">Toevoegen aan winkelwagentje</button>
+            </div>
+            <div class="product">
+                <img src="img/luxe-hoodie.jpg" alt="Luxe Hoodie">
+                <h4>Luxe Hoodie</h4>
+                <p>Prijs: €119,99</p>
+                <button class="add-to-cart">Toevoegen aan winkelwagentje</button>
+            </div>
+            <div class="product">
+                <img src="img/luxe-jacket.jpg" alt="Luxe Jacket">
+                <h4>Luxe Jacket</h4>
+                <p>Prijs: €179,99</p>
+                <button class="add-to-cart">Toevoegen aan winkelwagentje</button>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Luxo Fashion</p>
+        <p>&copy; 2025 Luxo Fashion | Alle rechten voorbehouden</p>
     </footer>
 
     <script src="scripts.js"></script> <!-- Verbindt de JavaScript-code -->
 </body>
 </html>
-/* Algemene opmaak voor de body */
+/* Algemene opmaak */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    color: #333;
 }
 
 /* Header styling */
 header {
-    background-color: #333;
+    background-color: #000080;
     color: white;
     padding: 20px;
     text-align: center;
-    position: absolute;
-    width: 100%;
-    top: 0;
-}
-
-header .header-content h1 {
-    margin: 0;
-}
-
-/* Hoofdcontainer voor sidebar en inhoud */
-.main-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 80px; /* Zorgt ervoor dat de inhoud niet achter de header zit */
-    height: 90vh; /* Zorgt ervoor dat de inhoud binnen het scherm past */
+    align-items: center;
+    padding: 10px 20px;
 }
 
-/* Sidebar styling */
-.sidebar {
-    width: 20%;
-    background-color: #333;
-    padding-top: 20px;
-    position: fixed;
-    height: 100%;
-    top: 80px; /* Zorgt ervoor dat de sidebar onder de header zit */
+header .logo img {
+    width: 150px;
 }
 
-.sidebar ul {
+header nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
 
-.sidebar ul li {
-    margin: 20px 0;
+header nav ul li {
+    margin: 0 15px;
 }
 
-.sidebar ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px;
-    display: block;
+    font-weight: bold;
 }
 
-.sidebar ul li a:hover {
-    background-color: #f4a261;
+/* Main content */
+main {
+    padding: 20px;
 }
 
-/* Hoofdinformatie - Logo */
-.main-content {
-    flex-grow: 1;
+/* Introductie sectie */
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Product sectie */
+.products {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.logo {
-    width: 300px; /* Pas de grootte van je logo aan */
+.product {
+    background-color: white;
+    border-radius: 8px;
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
 }
 
-/* Footer styling */
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product button {
+    background-color: #f4a261;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.product button:hover {
+    background-color: #e76f51;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 40px;
 }
+// Functie om een product toe te voegen aan het winkelwagentje
+function addToCart(productName) {
+    alert(`${productName} is toegevoegd aan je winkelwagentje!`);
+}
+
+// Event listener voor de knop "Toevoegen aan winkelwagentje"
+const buttons = document.querySelectorAll('.add-to-cart');
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        const productName = this.previousElementSibling.previousElementSibling.textContent; // haalt de productnaam op
+        addToCart(productName);
+    });
+});
+/projectmap
+    /img
+        luxe-tshirt.jpg
+        luxe-hoodie.jpg
+        luxe-jacket.jpg
+        luxo-logo.png
+    index.html
+    styles.css
+    scripts.js
+
