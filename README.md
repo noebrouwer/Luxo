@@ -8,11 +8,11 @@
 </head>
 <body>
     <header>
-        <h1>Welkom bij Luxo Fashion</h1>
+        <h1>Welcome to Luxo Fashion</h1>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Producten</a></li>
+                <li><a href="#">Products</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
