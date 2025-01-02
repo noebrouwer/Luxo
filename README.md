@@ -22,7 +22,7 @@
         <section class="product">
             <h2>Luxe T-shirt</h2>
             <img src="img/luxe-tshirt.jpg" alt="Luxe T-shirt">
-            <p>Prijs: €49,99</p>
+            <p>Prijs: €59,99</p>
             <button class="add-to-cart">Toevoegen aan winkelwagentje</button>
         </section>
 
