@@ -44,7 +44,7 @@
 /* Algemene opmaak voor de body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #000080;
     color: #333;
     margin: 0;
     padding: 0;
