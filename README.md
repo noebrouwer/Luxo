@@ -7,27 +7,27 @@
     <link rel="stylesheet" href="styles.css"> <!-- Verbindt de CSS-stijl -->
 </head>
 <body>
-    <<header>
-    <div class="header-content">
-        <h1>Welcome to Luxo Fashion</h1>
+    <header>
+        <div class="header-content">
+            <h1>Welcome to Luxo Fashion</h1>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#">Man</a></li>
+                <li><a href="#">Woman</a></li>
+                <li><a href="#">Kids</a></li>
+            </ul>
+        </nav>
+
+        <!-- Logo en leeg midden -->
+        <div class="main-content">
+            <img src="img/luxo-logo.png" alt="Luxo Logo" class="logo">
+        </div>
     </div>
-</header>
-
-    <main>
-        <section class="product">
-            <h2>Luxe T-shirt</h2>
-            <img src="img/luxe-tshirt.jpg" alt="Luxe T-shirt">
-            <p>Prijs: €59,99</p>
-            <button class="add-to-cart">Toevoegen aan winkelwagentje</button>
-        </section>
-
-        <section class="product">
-            <h2>Luxe Hoodie</h2>
-            <img src="img/luxe-Hoodie.jpg" alt="Luxe Hoodie">
-            <p>Prijs: €119,99</p>
-            <button class="add-to-cart">Toevoegen aan winkelwagentje</button>
-        </section>
-    </main>
 
     <footer>
         <p>&copy; 2025 Luxo Fashion</p>
@@ -39,10 +39,9 @@
 /* Algemene opmaak voor de body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #000080;
-    color: #333;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 /* Header styling */
@@ -51,50 +50,63 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
 }
 
-header nav ul {
+header .header-content h1 {
+    margin: 0;
+}
+
+/* Hoofdcontainer voor sidebar en inhoud */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px; /* Zorgt ervoor dat de inhoud niet achter de header zit */
+    height: 90vh; /* Zorgt ervoor dat de inhoud binnen het scherm past */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 20%;
+    background-color: #333;
+    padding-top: 20px;
+    position: fixed;
+    height: 100%;
+    top: 80px; /* Zorgt ervoor dat de sidebar onder de header zit */
+}
+
+.sidebar ul {
     list-style-type: none;
     padding: 0;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 10px;
+.sidebar ul li {
+    margin: 20px 0;
 }
 
-header nav ul li a {
+.sidebar ul li a {
     color: white;
     text-decoration: none;
+    padding: 10px;
+    display: block;
 }
 
-/* Styling voor de productsectie */
-.product {
-    background-color: white;
-    border-radius: 8px;
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.product img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.product button {
+.sidebar ul li a:hover {
     background-color: #f4a261;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-.product button:hover {
-    background-color: #e76f51;
+/* Hoofdinformatie - Logo */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 300px; /* Pas de grootte van je logo aan */
 }
 
 /* Footer styling */
@@ -107,16 +119,3 @@ footer {
     bottom: 0;
     width: 100%;
 }
-// Functie om een product toe te voegen aan het winkelwagentje
-function addToCart(productName) {
-    alert(`${productName} is toegevoegd aan je winkelwagentje!`);
-}
-
-// Event listener voor de knop "Toevoegen aan winkelwagentje"
-const buttons = document.querySelectorAll('.add-to-cart');
-buttons.forEach(button => {
-    button.addEventListener('click', function() {
-        const productName = this.previousElementSibling.previousElementSibling.textContent; // haalt de productnaam op
-        addToCart(productName);
-    });
-});
