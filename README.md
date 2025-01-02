@@ -7,16 +7,11 @@
     <link rel="stylesheet" href="styles.css"> <!-- Verbindt de CSS-stijl -->
 </head>
 <body>
-    <header>
+    <<header>
+    <div class="header-content">
         <h1>Welcome to Luxo Fashion</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    </div>
+</header>
 
     <main>
         <section class="product">
