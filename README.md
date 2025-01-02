@@ -27,9 +27,9 @@
         </section>
 
         <section class="product">
-            <h2>Luxe Jeans</h2>
-            <img src="img/luxe-jeans.jpg" alt="Luxe Jeans">
-            <p>Prijs: €79,99</p>
+            <h2>Luxe Hoodie</h2>
+            <img src="img/luxe-Hoodie.jpg" alt="Luxe Hoodie">
+            <p>Prijs: €119,99</p>
             <button class="add-to-cart">Toevoegen aan winkelwagentje</button>
         </section>
     </main>
