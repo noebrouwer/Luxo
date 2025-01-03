@@ -9,8 +9,8 @@
 <body>
     <header>
         <div class="logo">
-            <img src="img/luxo-logo.png" alt="Luxo Logo">
-        </div>
+            <img src="img/Create luxo-logo.png" alt="Luxo Logo">
+        </div> 
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -174,8 +174,9 @@ buttons.forEach(button => {
         T-shirt.jpg
         Hoodie.jpg
         Sweatpants.jpg
-        luxo-logo.png
+        img/Create luxo-logo.png
     index.html
     styles.css
     scripts.js
+    
 
